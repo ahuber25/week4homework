@@ -3,14 +3,37 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
         <title>Coding Quiz</title>
 
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
     <body>
         <header>
-            <a class="scores" href="highscores.html">View Highscores</a>
+            <a href="highscores.html">View Highscores</a>
             <div class="timer">Time: <span id="time">0</span></div>
         </header>
+        <div class="quiz">
+            <section id="starting" class="start">
+                <h1>Coding Quiz</h1>
+                <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                <button id="start">Start!</button>
+            </section>
+        
+            <section id="questions" class="hide">
+                <h2 id="question-title"></h2>
+                <div id="multiple" class="choice"></div>
+            </section>
+
+            <section id="done" class="hide">
+                <h2>All done.</h2>
+                <p>Your final score is <span id="score"></span>.</p>
+                <p>Enter initials: <input type="text" id="initials" max="4" /></p>
+                <button id="submit">Submit</button>
+            </section>
+        </div>
+
+        <script src="./assets/javascript/questions.js"></script>
+        <script src="./assets/javascript/setup.js"></script>
     </body>
 </html>
